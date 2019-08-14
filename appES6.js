@@ -43,7 +43,7 @@ class UI {
         // Append alert box 
         container.insertBefore(alertBox, form);
         // Timeout after 5 seconds
-        setTimeout(function() {
+        setTimeout(() => {
             document.querySelector('.alert').remove();
         }, 5000);
     }
@@ -67,7 +67,7 @@ const form = document.querySelector('#book-form');
 
 
 // Add Book Event listener 
-form.addEventListener('submit', function(e) {
+form.addEventListener('submit', (e) => {
     // Get values input by the user
     const title = document.querySelector('#title').value,
           author = document.querySelector('#author').value,
@@ -102,7 +102,7 @@ form.addEventListener('submit', function(e) {
 
 
 // Delete Book Event Listener
-document.querySelector('#book-list').addEventListener('click', function(e) {
+document.querySelector('#book-list').addEventListener('click', (e) => {
     
     // Create a UI instance
     const ui = new UI();
