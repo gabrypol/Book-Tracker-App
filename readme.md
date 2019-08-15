@@ -9,16 +9,16 @@ Afterwards, I added the local storage to the ES6 version, so that the list of bo
 
 # Book Tracker App
 
-## Main Page:
+## * Main Page:
 ![](images/image01.png)
 
 <br /><br /><br /><br />
 
-## The book has been successfully added to the system:
+## * The book has been successfully added to the system:
 ![](images/image02.png)
 
 <br /><br /><br /><br />
 
-## Please fill in Title, Author and ISBN of the book:
+## * Please fill in Title, Author and ISBN of the book:
 ![](images/image03.png)
 
