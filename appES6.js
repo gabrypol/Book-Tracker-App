@@ -45,7 +45,7 @@ class UI {
         // Timeout after 5 seconds
         setTimeout(() => {
             document.querySelector('.alert').remove();
-        }, 5000);
+        }, 15000);
     }
 
     deleteBook(target) {
@@ -61,6 +61,63 @@ class UI {
     }
 }
 
+
+// Local Storage class
+class LStorage {
+
+    // Fetch books from local storage
+    static getBooks() {
+        let booksInLS;
+        if (localStorage.getItem('books') === null) {
+            booksInLS = [];
+        } else {
+            booksInLS = JSON.parse(localStorage.getItem('books'));
+        }
+        return booksInLS;
+    }
+
+
+
+    static displayBooks() {
+        // Call 'getBooks' function in order to fetch the list from the local storage
+        const books = LStorage.getBooks();
+
+        books.forEach(book => {
+            const ui = new UI;
+
+            // Add book to UI
+            ui.addBookToList(book);
+        })
+    }
+
+
+    static addBook(book) {
+        // Call 'getBooks' function in order to fetch the list from the local storage
+        const books = LStorage.getBooks();
+
+        // Add new book to the list
+        books.push(book);
+
+        localStorage.setItem('books', JSON.stringify(books));
+    }
+
+
+    static removeBook(isbn) {
+        const books = LStorage.getBooks();
+
+        books.forEach((book, index) => {
+            if(book.isbn === isbn) {
+                books.splice(index, 1);
+            }
+        });
+
+        localStorage.setItem('books', JSON.stringify(books));
+    }
+
+}
+
+// Load books from Local Storage when DOM is loaded
+document.addEventListener('DOMContentLoaded', LStorage.displayBooks);
 
 // Select '#book-form' element of the DOM and assign it to the variable 'form'
 const form = document.querySelector('#book-form');
@@ -90,6 +147,9 @@ form.addEventListener('submit', (e) => {
         // Add book to list
         ui.addBookToList(book);
 
+        // Add to Local Storage
+        LStorage.addBook(book);
+
         // Show success alert
         ui.showAlert('The book has been successfully added to the system.', 'success');
             
@@ -109,6 +169,9 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
 
     // Delete book from list
     ui.deleteBook(e.target);
+
+    // Delete from Local Storage
+    LStorage.removeBook(e.target.parentElement.previousElementSibling.textContent);
 
     // Show success alert
     ui.showAlert('The book has been successfully deleted from the system.', 'success');

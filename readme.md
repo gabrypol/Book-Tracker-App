@@ -1,5 +1,5 @@
-# JavaScript ES5 vs ES6:
-I initially made this project using JavaScript ES5 syntax. Then I converted it into a ES6 version using 'class' and 'arrow functions' (Both versions are on the repository).
+# JavaScript ES5 and ES6:
+I initially made this project using JavaScript ES5 syntax. Then I converted it into a ES6 version using 'class' and 'arrow functions' (Both versions ES5 and ES6 are on the repository).
 
 Afterwards, I added the local storage to the ES6 version, so that the list of books is persistant even after closing or refreshing the browser.
 
