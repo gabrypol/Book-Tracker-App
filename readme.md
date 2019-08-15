@@ -9,10 +9,10 @@ Afterwards, I added the local storage to the ES6 version, so that the list of bo
 
 # Book Tracker App
 
-<p style="text-align: center;">************</p>
-
 ## Main Page:
 ![](images/image01.png)
+
+<br />
 
 ## ****************************************************
 
