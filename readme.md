@@ -14,6 +14,10 @@ Afterwards, I added the local storage to the ES6 version, so that the list of bo
 ## The book has been successfully added to the system.
 ![](images/image02.png)
 
+
+
+
+
 ## Please fill in Title, Author and ISBN of the book.
 ![](images/image03.png)
 
