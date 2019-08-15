@@ -14,13 +14,12 @@ Afterwards, I added the local storage to the ES6 version, so that the list of bo
 ## Main Page:
 ![](images/image01.png)
 
-<p style="text-align: center;">************</p>
+## ****************************************************
 
 ## The book has been successfully added to the system.
 ![](images/image02.png)
 
- <h1></h1>
- <h1></h1>
+## ****************************************************
 
 ## Please fill in Title, Author and ISBN of the book.
 ![](images/image03.png)
