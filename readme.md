@@ -19,7 +19,7 @@ Afterwards, I added the local storage to the ES6 version, so that the list of bo
 ## The book has been successfully added to the system.
 ![](images/image02.png)
 
-<p style="text-align: center;">************</p>
+ <h4><center>My H4 Heading</center></h4>
 
 ## Please fill in Title, Author and ISBN of the book.
 ![](images/image03.png)
