@@ -45,7 +45,7 @@ class UI {
         // Timeout after 5 seconds
         setTimeout(() => {
             document.querySelector('.alert').remove();
-        }, 15000);
+        }, 5000);
     }
 
     deleteBook(target) {
@@ -76,8 +76,6 @@ class LStorage {
         return booksInLS;
     }
 
-
-
     static displayBooks() {
         // Call 'getBooks' function in order to fetch the list from the local storage
         const books = LStorage.getBooks();
@@ -90,7 +88,6 @@ class LStorage {
         })
     }
 
-
     static addBook(book) {
         // Call 'getBooks' function in order to fetch the list from the local storage
         const books = LStorage.getBooks();
@@ -100,7 +97,6 @@ class LStorage {
 
         localStorage.setItem('books', JSON.stringify(books));
     }
-
 
     static removeBook(isbn) {
         const books = LStorage.getBooks();
@@ -113,7 +109,6 @@ class LStorage {
 
         localStorage.setItem('books', JSON.stringify(books));
     }
-
 }
 
 // Load books from Local Storage when DOM is loaded
@@ -121,7 +116,6 @@ document.addEventListener('DOMContentLoaded', LStorage.displayBooks);
 
 // Select '#book-form' element of the DOM and assign it to the variable 'form'
 const form = document.querySelector('#book-form');
-
 
 // Add Book Event listener 
 form.addEventListener('submit', (e) => {
