@@ -1,0 +1,23 @@
+{
+  "name": "bookshop",
+  "version": "1.0.0",
+  "description": "I initially made this project using JavaScript ES5 syntax. Then I converted it into a ES6 version using 'class' and 'arrow functions' (Both versions ES5 and ES6 are on the repository).",
+  "main": "appES5.js",
+  "scripts": {
+    "deploy": "gh-pages -d public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrypol/Book-Tracker-App.git"
+  },
+  "keywords": [],
+  "author": "Gabriele Polenta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrypol/Book-Tracker-App/issues"
+  },
+  "homepage": "https://gabrypol.github.io/Book-Tracker-App",
+  "dependencies": {
+    "gh-pages": "^2.1.1"
+  }
+}

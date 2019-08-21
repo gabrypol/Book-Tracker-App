@@ -15,7 +15,7 @@ class UI {
         const bookList = document.querySelector('#book-list');
         // Create one row of the table
         const row = document.createElement('tr');
-        
+
         // Create elements of the row ('td')
         const titleCell = document.createElement('td');
         const authorCell = document.createElement('td');
@@ -49,7 +49,7 @@ class UI {
     }
 
     deleteBook(target) {
-        if(target.className === 'delete') {
+        if (target.className === 'delete') {
             target.parentElement.parentElement.remove();
         }
     }
@@ -102,7 +102,7 @@ class LStorage {
         const books = LStorage.getBooks();
 
         books.forEach((book, index) => {
-            if(book.isbn === isbn) {
+            if (book.isbn === isbn) {
                 books.splice(index, 1);
             }
         });
@@ -121,8 +121,8 @@ const form = document.querySelector('#book-form');
 form.addEventListener('submit', (e) => {
     // Get values input by the user
     const title = document.querySelector('#title').value,
-          author = document.querySelector('#author').value,
-          isbn = document.querySelector('#isbn').value;
+        author = document.querySelector('#author').value,
+        isbn = document.querySelector('#isbn').value;
 
     // Create a book instance
     const book = new Book(title, author, isbn);
@@ -133,7 +133,7 @@ form.addEventListener('submit', (e) => {
     console.log(ui);
 
     // Input validation
-    if(title === '' || author === '' || isbn === '') {
+    if (title === '' || author === '' || isbn === '') {
         // Error alert
         ui.showAlert('Please fill in Title, Author and ISBN of the book.', 'error');
 
@@ -146,7 +146,7 @@ form.addEventListener('submit', (e) => {
 
         // Show success alert
         ui.showAlert('The book has been successfully added to the system.', 'success');
-            
+
         // Clear text fields
         ui.clearTextFields();
     }
@@ -157,7 +157,7 @@ form.addEventListener('submit', (e) => {
 
 // Delete Book Event Listener
 document.querySelector('#book-list').addEventListener('click', (e) => {
-    
+
     // Create a UI instance
     const ui = new UI();
 
